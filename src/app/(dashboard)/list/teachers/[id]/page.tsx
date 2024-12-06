@@ -116,11 +116,16 @@ const SingleTeacherPage = () => {
        <div className="bg-white p-4 rounded-md">
            <h1 className="text-xl font-semibold">Shortcuts</h1>
            <div className="mt-4 flex gap-4 flex-wrap text-xs text-gray-500">
-              <Link className="p-2 rounded-md bg-lamaSkyLight" href='/'>Teaher&apos;s Classes</Link>
-              <Link className="p-2 rounded-md bg-lamaPurpleLight" href='/'>Teaher&apos;s Students</Link>
-              <Link className="p-2 rounded-md bg-lamaYellowLight-" href='/'>Teaher&apos;s Lessons</Link>
-              <Link className="p-2 rounded-md bg-pink-50" href='/'>Teaher&apos;s Exams</Link>
-              <Link className="p-2 rounded-md bg-lamaSkyLight" href='/'>Teaher&apos;s Assignements</Link>
+           <Link className="p-2 rounded-md bg-lamaSkyLight" href={`/list/classes?supervisorId?=${"teacher2"}`}>
+              Teaher&apos;s Classes</Link>
+              <Link className="p-2 rounded-md bg-lamaYellowLight" href={`/list/students?teacherId?=${"teacher2"}`}>
+              Teaher&apos;s Students</Link>
+              <Link className="p-2 rounded-md bg-lamaPurpleLight" href={`/list/lessons?teacherId?=${"teacher2"}`}>
+              Teaher&apos;s Lessons</Link>
+              <Link className="p-2 rounded-md bg-pink-50" href={`/list/exams?teacherId?=${"teacher2"}`}>
+              Teaher&apos;s Exams</Link>
+              <Link className="p-2 rounded-md bg-lamaSkyLight" href={`/list/assignments?teacherId?=${"teacher2"}`}>
+              Teaher&apos;s Assignements</Link>
            </div>
        </div>
        <Performance/>
